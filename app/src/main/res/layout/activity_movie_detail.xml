@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bg"
+    tools:context=".views.MovieDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="550dp">
+
+                <ImageView
+                    android:id="@+id/posterDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/poster"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/releaseDateDetail"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textColor="?attr/boldText"
+                    android:textSize="28sp"
+                    tools:text="Title"/>
+
+                <TextView
+                    android:id="@+id/releaseDateDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    tools:text="Release Date"
+                    android:textColor="?attr/boldText"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/genreDetail"
+                    android:layout_below="@+id/titleDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:textColor="?attr/boldText"
+                    android:textSize="18sp"
+                    tools:text="Genres"/>
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_below="@+id/releaseDateDetail"
+                    android:layout_toStartOf="@+id/ratingText"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/material_blue"
+                    android:progressTint="@color/material_blue"
+                    android:rating="4.5"
+                    android:secondaryProgressTint="@color/material_blue"
+                    android:stepSize="0.1" />
+
+                <TextView
+                    android:id="@+id/ratingText"
+                    android:layout_below="@+id/releaseDateDetail"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="14sp"
+                    android:textColor="?attr/boldText"
+                    tools:text="4.5"/>
+
+                <TextView
+                    android:id="@+id/overviewTitle"
+                    android:layout_below="@+id/genreDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"
+                    android:text="@string/overview"/>
+
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_below="@+id/overviewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:textColor="?attr/regularText"
+                    android:textSize="14sp"
+                    android:text="@string/overview"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

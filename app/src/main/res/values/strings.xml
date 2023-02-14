@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movieku-kt</string>
+    <string name="logo">Logo</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="poster">Poster</string>
+    <string name="overview">Overview</string>
+</resources>
